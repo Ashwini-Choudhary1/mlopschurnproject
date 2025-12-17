@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+mlruns/
+model.pkl
+data/raw/*.csv
