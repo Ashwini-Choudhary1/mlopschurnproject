@@ -1,3 +1,4 @@
+from src.datapreprocessing import preprocess
 import pandas as pd 
 import numpy as np 
 from sklearn.ensemble import RandomForestClassifier
@@ -7,7 +8,7 @@ from pathlib import Path
 import mlflow
 import mlflow.sklearn
 
-processed_dir = Path("/Users/ashwinichoudhary/mlopschurnproject/data/processed")
+processed_dir = Path("data/processed")
 model_dir = Path("models")
 model_path = model_dir/"churnmodel.pkl"
 
@@ -16,6 +17,7 @@ def train():
     mlflow.set_experiment("basic churn line model")
 
     with mlflow.start_run():
+        preprocess()
 
         X_train = pd.read_csv(processed_dir/"Xtrain.csv")
         X_test = pd.read_csv(processed_dir/"X_test.csv")
