@@ -17,7 +17,7 @@ def train():
 
     with mlflow.start_run():
 
-        preprocess()
+        #preprocess()
 
         X_train = pd.read_csv(PROCESSED_DIR / "Xtrain.csv")
         X_test = pd.read_csv(PROCESSED_DIR / "X_test.csv")
@@ -57,7 +57,7 @@ def train():
 
         mlflow.log_artifact(MODEL_PATH)
 
-        print("✅ Training completed and logged to MLflow")
+        print("Training completed and logged to MLflow")
 
 if __name__ == "__main__":
     train()

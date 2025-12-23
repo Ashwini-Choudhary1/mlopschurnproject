@@ -50,7 +50,7 @@ def preprocess():
     y_train.to_csv(PROCESSED_DIR / "y_train.csv", index=False)
     y_test.to_csv(PROCESSED_DIR / "y_test.csv", index=False)
 
-    print("✅ Data preprocessing completed")
+    print("Data preprocessing completed")
 
 if __name__ == "__main__":
     preprocess()
