@@ -4,3 +4,5 @@ __pycache__/
 mlruns/
 model.pkl
 data/raw/*.csv
+models/
+mlflow.db
