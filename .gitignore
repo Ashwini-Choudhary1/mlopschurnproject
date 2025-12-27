@@ -6,3 +6,6 @@ model.pkl
 data/raw/*.csv
 models/
 mlflow.db
+data/processed_v2/
+data/processed/
+
